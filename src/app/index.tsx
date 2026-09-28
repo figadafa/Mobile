@@ -18,7 +18,7 @@ export default function Index() {
           style={styles.icon}
         />
 
-        <Text style={styles.title}>Hello World</Text>
+        <Text style={styles.title}>Percobaan Mobile</Text>
 
         <TextInput
           placeholder="I'm the input..."
@@ -31,7 +31,7 @@ export default function Index() {
             size={16}
             color="white"
           />
-          <Text style={styles.buttonText}>Click Me</Text>
+          <Text style={styles.buttonText}>Sentuh Aku</Text>
         </View>
       </View>
     </View>
@@ -41,7 +41,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#e0f2fe",
+    backgroundColor: "#e9760a",
     justifyContent: "center",
     padding: 20,
   },
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
-    backgroundColor: "#2563eb",
+    backgroundColor: "#000000",
     padding: 12,
     borderRadius: 10,
     width: "100%",
