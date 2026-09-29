@@ -4,6 +4,7 @@ import {
   Text,
   TextInput,
   StyleSheet,
+  Button,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -14,7 +15,7 @@ export default function Index() {
         <Ionicons
           name="information-circle"
           size={24}
-          color="#2563eb"
+          color="#ed2f1e"
           style={styles.icon}
         />
 
@@ -31,7 +32,11 @@ export default function Index() {
             size={16}
             color="white"
           />
-          <Text style={styles.buttonText}>Sentuh Aku</Text>
+          <Button
+            title="Click Me"
+            onPress={() => {}}
+            color="white"
+          />
         </View>
       </View>
     </View>
@@ -41,7 +46,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#e9760a",
+    backgroundColor: "#fcfbf9",
     justifyContent: "center",
     padding: 20,
   },
@@ -80,7 +85,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
-    backgroundColor: "#000000",
+    backgroundColor: "#ffffff",
     padding: 12,
     borderRadius: 10,
     width: "100%",
