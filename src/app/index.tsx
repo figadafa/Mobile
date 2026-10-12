@@ -1,14 +1,16 @@
-
 import {
   View,
   Text,
   TextInput,
   StyleSheet,
-  Button,
+  TouchableOpacity,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 export default function Index() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
       <View style={styles.card}>
@@ -25,19 +27,30 @@ export default function Index() {
           placeholder="I'm the input..."
           style={styles.input}
         />
-
-        <View style={styles.button}>
+        <TouchableOpacity
+          style={styles.originalButton}
+          onPress={() => {}} // Preserving original empty behavior
+        >
           <Ionicons
             name="hand-left"
             size={16}
             color="white"
           />
-          <Button
-            title="Click Me"
-            onPress={() => {}}
+          <Text style={styles.originalButtonText}>Click Me</Text>
+        </TouchableOpacity>
+
+        {/* New button for Dark Mode example */}
+        <TouchableOpacity
+          style={styles.darkModeButton}
+          onPress={() => router.push("/usecontext_example")}
+        >
+          <Ionicons
+            name="moon"
+            size={16}
             color="white"
           />
-        </View>
+          <Text style={styles.darkModeButtonText}>Go to Dark Mode Example</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -80,18 +93,37 @@ const styles = StyleSheet.create({
     width: "100%",
   },
 
-  button: {
+  originalButton: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#ed2f1e", // Matching original red title color for consistency
     padding: 12,
     borderRadius: 10,
     width: "100%",
+    marginBottom: 10,
   },
 
-  buttonText: {
+  originalButtonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+
+  darkModeButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    backgroundColor: "#6200ee", // A distinct color for the new button
+    padding: 12,
+    borderRadius: 10,
+    width: "100%",
+    marginBottom: 10,
+  },
+
+  darkModeButtonText: {
     color: "white",
     fontSize: 16,
     fontWeight: "bold",
